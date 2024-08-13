@@ -1,0 +1,18 @@
+name: Lint Check
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+
+jobs:
+  Check-lint-error:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v4
+      - name: Install Dependencies
+        run: npm install
+      - name: Check Lint
+        run: npm run lint
