@@ -27,4 +27,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create comment with comment-with-api
-        uses:
+        run: echo "test"
+        shell: bash
